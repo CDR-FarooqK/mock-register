@@ -1,29 +1,6 @@
 name: Build Docker Image
 
-on:
-  push:
-    branches: [main, develop]
-    tags:
-      - 'v*'
-    paths-ignore:
-      # Any update here needs to be done for
-      # - `pull_request` see below
-      - '*.md'
-      - '.github/ISSUE_TEMPLATE/**'
-      - '.github/pull_request_template.md'
-      - '.github/stale.yml'
-      - 'LICENSE'
-  pull_request:
-    branches: [main, develop]
-    types: [opened, synchronize, reopened]
-    paths-ignore:
-    # Any update here needs to be done for
-    # - `push`see before
-      - '*.md'
-      - '.github/ISSUE_TEMPLATE/**'
-      - '.github/pull_request_template.md'
-      - '.github/stale.yml'
-      - 'LICENSE'
+on:  
   workflow_dispatch:
 
 env:
